@@ -1,8 +1,10 @@
 import CheckIcon from '../assets/icons/check.svg?react';
 import LoaderIcon from '../assets/icons/loader-circle.svg?react';
 import DetaisIcon from '../assets/icons/details.svg?react';
+import TrashIcon from '../assets/icons/trash-2.svg?react';
+import Button from './Button';
 
-const TaskItem = ({ task, handleTaskCheckboxClick }) => {
+const TaskItem = ({ task, handleCheckboxClick, handleDeleteClick }) => {
   const getStatusClasses = () => {
     if (task.status === 'done') {
       return 'bg-[#00ADB5] text-[#00ADB5]';
@@ -27,16 +29,25 @@ const TaskItem = ({ task, handleTaskCheckboxClick }) => {
             type="checkbox"
             checked={task.status === 'done'}
             className="absolute h-full w-full cursor-pointer opacity-0"
-            onChange={() => handleTaskCheckboxClick(task.id)} //Quando for chamar uma função que recebe como prop e precisa passar parametro precisa ser assim
+            onChange={() => handleCheckboxClick(task.id)} //Quando for chamar uma função que recebe como prop e precisa passar parametro precisa ser assim
           />
           {task.status === 'done' && <CheckIcon />}
           {task.status === 'in_progress' && <LoaderIcon />}
         </label>
         {task.title}
       </div>
-      <a href="#" className="transition hover:opacity-75">
-        <DetaisIcon />
-      </a>
+      <div className="flex items-center gap-2">
+        <Button
+          onClick={() => handleDeleteClick(task.id)}
+          variant="ghost"
+          className="flex items-center gap-2"
+        >
+          <TrashIcon className="text-[#9a9c9f]" />
+        </Button>
+        <a href="#" className="transition hover:opacity-75">
+          <DetaisIcon />
+        </a>
+      </div>
     </div>
   );
 };
