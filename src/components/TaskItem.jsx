@@ -2,7 +2,7 @@ import CheckIcon from '../assets/icons/check.svg?react';
 import LoaderIcon from '../assets/icons/loader-circle.svg?react';
 import DetaisIcon from '../assets/icons/details.svg?react';
 
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task, handleTaskCheckboxClick }) => {
   const getStatusClasses = () => {
     if (task.status === 'done') {
       return 'bg-[#00ADB5] text-[#00ADB5]';
@@ -17,7 +17,7 @@ const TaskItem = ({ task }) => {
 
   return (
     <div
-      className={`${getStatusClasses()} flex items-center justify-between gap-2 rounded-lg bg-opacity-10 px-4 py-3`}
+      className={`${getStatusClasses()} flex items-center justify-between gap-2 rounded-lg bg-opacity-10 px-4 py-3 transition`}
     >
       <div className="flex items-center gap-2">
         <label
@@ -27,6 +27,7 @@ const TaskItem = ({ task }) => {
             type="checkbox"
             checked={task.status === 'done'}
             className="absolute h-full w-full cursor-pointer opacity-0"
+            onChange={() => handleTaskCheckboxClick(task.id)} //Quando for chamar uma função que recebe como prop e precisa passar parametro precisa ser assim
           />
           {task.status === 'done' && <CheckIcon />}
           {task.status === 'in_progress' && <LoaderIcon />}
