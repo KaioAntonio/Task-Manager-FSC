@@ -43,6 +43,12 @@ const Tasks = () => {
     setTasks(newTasks);
   };
 
+  const handleCreateTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+    toast.success('Tarefa criada com sucesso!');
+    setAddTaskDialogIsOpen(false);
+  };
+
   const handleDeleteClick = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
@@ -76,6 +82,7 @@ const Tasks = () => {
           <AddTaskDialog
             isOpen={addTaskDialogIsOpen}
             handleClose={handleDialogClose}
+            handleCreateTask={handleCreateTask}
           />
         </div>
       </div>
