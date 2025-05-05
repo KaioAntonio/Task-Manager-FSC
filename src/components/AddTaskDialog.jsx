@@ -48,10 +48,9 @@ const AddTaskDialog = ({ isOpen, handleClose, handleCreateTask }) => {
       });
     }
 
-    console.log(newErrors);
+    setErrors(newErrors);
 
     if (newErrors.length > 0) {
-      setErrors(newErrors);
       return;
     }
 
