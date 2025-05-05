@@ -54,7 +54,17 @@ const Tasks = () => {
     setTasks(newTasks);
   };
 
-  const handleCreateTask = (newTask) => {
+  const handleCreateTask = async (newTask) => {
+    const response = await fetch('http://localhost:3000/tasks', {
+      method: 'POST',
+      body: JSON.stringify(newTask),
+    });
+    if (!response.ok) {
+      return toast.error(
+        'Erro ao adicionar a tarefa. Por favor, tente novamente'
+      );
+    }
+
     setTasks([...tasks, newTask]);
     toast.success('Tarefa criada com sucesso!');
     setAddTaskDialogIsOpen(false);
