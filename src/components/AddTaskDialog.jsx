@@ -34,14 +34,14 @@ const AddTaskDialog = ({ isOpen, handleClose, handleCreateTask }) => {
     const description = descriptionRef.current.value;
     const time = timeRef.current.value;
 
-    if (!title.current.value.trim()) {
+    if (!title.trim()) {
       newErrors.push({
         field: 'title',
         message: 'Campo título é obrigatório',
       });
     }
 
-    if (!description.current.value.trim()) {
+    if (!description.trim()) {
       newErrors.push({
         field: 'description',
         message: 'Campo descrição é obrigatório',
@@ -65,7 +65,7 @@ const AddTaskDialog = ({ isOpen, handleClose, handleCreateTask }) => {
       id: v4(),
       title: titleRef.current.value,
       description: descriptionRef.current.value,
-      time,
+      time: timeRef.current.value,
       status: 'not_started',
     });
     handleClose();
