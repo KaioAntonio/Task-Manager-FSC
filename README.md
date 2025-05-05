@@ -1,8 +1,41 @@
-# React + Vite
+# FSC Task Manager 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um gerenciador de tarefas moderno e responsivo, desenvolvido com **Vite** e estilizado com **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Adição e remoção de tarefas
+- 🕹️ Interface simples e interativa
+- 🎨 Estilização personalizada com Tailwind (`/brand/colors`)
+- ⚡ Performance otimizada com Vite
+
+## 📦 Tecnologias
+
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+## 🔧 Como executar localmente
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/fsc-task-manager.git
+   cd fsc-task-manager
+
+   ```
+
+2. Instale as dependências:
+
+```bash
+   npm install
+```
+
+3. Inicie o projeto:
+
+```bash
+npm run dev
+    Acesse o navegador: http://localhost:3000
+```
+
+## Desenvolvido com 💻 por Kaio Antônio Andrade Rodrigues.
