@@ -69,13 +69,6 @@
       "description": "Regar e podar as plantas do quintal",
       "time": "morning",
       "status": "not_started"
-    },
-    {
-      "id": "6e8a1da6-09d7-4e2b-be84-157e9b31a8f6",
-      "title": "teste",
-      "description": "teste",
-      "time": "morning",
-      "status": "not_started"
     }
   ]
 }
