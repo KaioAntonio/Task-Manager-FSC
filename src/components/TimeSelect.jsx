@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
 import InputErrorMessage from './InputErrorMessage';
@@ -8,7 +9,7 @@ const TimeSelect = forwardRef((props, ref) => {
     <div className="flex flex-col gap-1 text-left">
       <InputLabel htmlFor="time">Horário</InputLabel>
       <select
-        className="outline-brand-primary placeholder:text-brand-text-gray border--border rounded-lg border border-solid bg-white px-4 py-3 placeholder:text-sm"
+        className="border--border rounded-lg border border-solid bg-white px-4 py-3 outline-brand-primary placeholder:text-sm placeholder:text-brand-text-gray"
         {...props}
         ref={ref}
       >
@@ -24,5 +25,9 @@ const TimeSelect = forwardRef((props, ref) => {
 });
 
 TimeSelect.displayName = 'TimeSelect';
+
+TimeSelect.propTypes = {
+  errorMessage: PropTypes.string,
+};
 
 export default TimeSelect;

@@ -1,5 +1,6 @@
 import './AddTaskDialog.css';
 
+import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -90,7 +91,7 @@ const AddTaskDialog = ({ isOpen, handleClose, handleCreateTask }) => {
             className="fixed bottom-0 left-0 top-0 flex h-screen w-screen items-center justify-center backdrop-blur"
           >
             <div className="rounded-xl bg-white p-5 text-center shadow">
-              <h2 className="text-brand-dark-blue text-center font-semibold">
+              <h2 className="text-center font-semibold text-brand-dark-blue">
                 Nova tarefa
               </h2>
               <p className="mb-4 mt-1 text-sm text-[#09090B]">
@@ -146,6 +147,12 @@ const AddTaskDialog = ({ isOpen, handleClose, handleCreateTask }) => {
       </div>
     </CSSTransition>
   );
+};
+
+AddTaskDialog.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  handleCreateTask: PropTypes.func.isRequired,
 };
 
 export default AddTaskDialog;
