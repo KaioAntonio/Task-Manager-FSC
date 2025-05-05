@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Estudar React",
+      "description": "Estudar React para melhorar minhas habilidades de desenvolvimento web",
+      "time": "morning",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "title": "Fazer compras",
+      "description": "Comprar frutas e verduras para a semana",
+      "time": "afternoon",
+      "status": "not_started"
+    },
+    {
+      "id": 3,
+      "title": "Ler um livro",
+      "description": "Ler um capítulo do livro que estou lendo",
+      "time": "evening",
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "title": "Fazer exercícios",
+      "description": "Fazer uma caminhada de 30 minutos",
+      "time": "afternoon",
+      "status": "in_progress"
+    },
+    {
+      "id": 5,
+      "title": "Assistir a um filme",
+      "description": "Assistir a um filme que estou querendo ver há tempos",
+      "time": "evening",
+      "status": "not_started"
+    },
+    {
+      "id": 6,
+      "title": "Revisar código",
+      "description": "Revisar o código do projeto para corrigir bugs",
+      "time": "morning",
+      "status": "in_progress"
+    },
+    {
+      "id": 7,
+      "title": "Organizar escritório",
+      "description": "Limpar a mesa e organizar papéis acumulados",
+      "time": "afternoon",
+      "status": "not_started"
+    },
+    {
+      "id": 8,
+      "title": "Responder e-mails",
+      "description": "Responder e-mails pendentes de trabalho",
+      "time": "morning",
+      "status": "done"
+    },
+    {
+      "id": 9,
+      "title": "Estudar algoritmos",
+      "description": "Praticar algoritmos e estruturas de dados",
+      "time": "evening",
+      "status": "in_progress"
+    },
+    {
+      "id": 10,
+      "title": "Cuidar das plantas",
+      "description": "Regar e podar as plantas do quintal",
+      "time": "morning",
+      "status": "not_started"
+    }
+  ]
+}
